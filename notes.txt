@@ -4,4 +4,7 @@ package @angular/cli
 json
 typescript
 
+// angular hints : ng new proj ( dl les compos et genere le projet dans le frame - dans ce projet : routing -> yes (une page, browsing entre components)) / ng serve --open (projets à la django, le compile et l'execute)
+--> exemple a faire, tuto : https://angular.io/tutorial -> tour of heroes
+
 site : learnxinyminutes ( exos plusieurs langages )
