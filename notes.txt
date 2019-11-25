@@ -1,0 +1,7 @@
+Will use :
+nodejs / npm
+package @angular/cli
+json
+typescript
+
+site : learnxinyminutes ( exos plusieurs langages )
