@@ -21,7 +21,10 @@ You're at the end of your journey, and you've accomplished a lot.
 
 site : learnxinyminutes ( exos plusieurs langages )
 
-EXO todo Day2 :
+Exo bonus today : 
+ ajouter un component contact et son routing
+
+EXO todo Day2 (wip, compteur works ;) :
     - mettre en place une nouvelle route (routerlink) "compteur" (et son component)
     val de base 0 (nb de clicks + = ++, - = --)
     [-] onclick -> - +1
