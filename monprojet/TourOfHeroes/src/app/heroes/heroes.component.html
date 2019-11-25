@@ -1,13 +1,34 @@
 <h2>My Heroes</h2>
-<ul class="heroes"> <!-- gaffe, relatif au css only -->
-    <!-- Ici, on passe la fonction ngfor qui est l'equivalent d'une boucle for, on en definit les parametres entre " -->
+<!-- <ul class="heroes"> gaffe, relatif au css only -->
+    <!-- Ici, on passe la fonction ngfor qui est l'equivalent d'une boucle for, on en definit les parametres entre " et declehence sur le onselect
   <li *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
     (click)="onSelect(hero)">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
-</ul>
-<!-- Equivalent du if, si le selectedHero est valide, do -->
+</ul> -->
+
+<div>
+    <label>Hero name:
+      <input #heroName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(heroName.value); heroName.value=''">
+      add
+    </button>
+  </div>
+
+  <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+        <button class="delete" title="delete hero"
+          (click)="delete(hero)">x</button>
+      </li>
+    </ul>
+
+<!-- Equivalent du if, si le selectedHero est valide, do 
 <div *ngIf="selectedHero">
 
   <h2>{{selectedHero.name | uppercase}} Details</h2>
@@ -18,4 +39,6 @@
     </label>
   </div>
 
-</div>
+</div> -->
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> on voit que maintenant c'est le compo hero detail qui fait le job -->
