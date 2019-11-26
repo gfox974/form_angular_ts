@@ -1,7 +1,16 @@
+$colorDone: red;
+
 .done {
     text-decoration: line-through;
-    color: red;
-    //&:hover { - en scss on peut structurer en code, passer des var et des fonctions
+    color: $colorDone;
+    //&:hover { - en scss on peut structurer comme en objet, coder en cascade (nesting) prendre des operateurs, imports etc
     //    color: red;
     //}
+}
+
+ul[role="main"] {
+    border: 1px solid;
+    background: whitesmoke;
+    width: 220px;
+    text-align: center;
 }

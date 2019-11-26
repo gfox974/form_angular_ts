@@ -39,3 +39,34 @@ Exo Day2 - Todo list :
         - pouvoir ajouter des taches ( un input de champ de caracteres ? )
         - passer un statut fait / pas fait ( genre rayé si tache accomplie ), bouton supprimer pour la tache
         - Ajout de filtres : afficher les taches a faire / accomplies / toutes
+
+( ng models, classes etc)
+DONE, mais encore des pistes a explo pour la liste
+
+Exos Day3 - mini apps à faire :
+( new proj miniapps)
+    - faire au moins trois de ces exercices :
+        - appli minuteur (difficulté **):
+            - pouvoir creer des minuteurs (customs avec libellé, start/stop) qui une fois démarrés se décomptent jusqu'a 0 (avec un refresh du visuel) -> alert ou autre DONE.
+            (setInterval peut aider)
+            - Fournir a l'utilisateur le moyen de creer un minuteur et de definir son temps
+        
+        - un convertisseur farenheit vers celsius (difficulté *):
+            - L'utilisateur doit entrer une valeur en degrés farenheit, on affiche son equivalent en celsius
+        
+        - IMC (indice de masse corporelle - difficulté *) :
+            - on entre sa taille en cm, son poids, l'application calcule et restitue l'indice de masse corporelle ( etat anorexie, maigreur, etc)
+
+        - RPN (reversed polish notation) : créer une calculatrice rpn (difficulté ***)
+        exemple : 1 * ( 2 + 3) -> normale,
+        polonaise inversée : 1 2 3 (les input sont stack dans un tableau) ( principe FIFO)
+                                + (les operateurs sont appliqués selon une sequence)
+                              *  
+        ( bref, voir techpedia vis à vis du rpn)
+
+        - Chuck norris jokes api (difficulté **): 
+            on va faire appel à une api pour fetch des jokes aleatoires (via un service) -> api dispo ici : https://api.chucknorris.io/ 
+            ( doc observables)
+
+        - Vote (difficulté **):
+            On a une urne, on procede au dépouillement, on doit savoir : quels candidats on a (nom), le nombre de votes total, le nombre de votes pour chacun des candidats, chaque bouton permet de voter pour un candidat, on affiche le % de voix pour chacun en dessous (+ bonus prise en compte du blanc(null))
