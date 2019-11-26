@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<label for="ajout">Ajouter une tache</label><br>
+<textarea name="ajout" id="ajout" cols="30" rows="3" placeholder="ajouter une tâche"></textarea><br>
+<button>Enregistrer la tache</button>
+
+<br>
+
+<ul>
+  <!-- <li>acheter du lait <button>x</button> </li>
+  <li>acheter de la coke <button>x</button> </li>
+  <li>acheter un flingue <button>x</button> </li> -->
+  <li *ngFor="let todo of todolist"
+  [class.done]="todo.isDone"
+  (click)="toggleTodo(todo)"
+  >{{todo.libelle}} <button>x</button></li>
+</ul>
+
+<h2>Montrer les tâches:</h2>
+<button disabled>Toutes</button><button>Completées</button><button>Actives</button>

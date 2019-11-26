@@ -5,7 +5,7 @@ json
 typescript
 
 // angular hints : ng new proj ( dl les compos et genere le projet dans le frame - dans ce projet : routing -> yes (une page, browsing entre components)) / ng serve --open (projets à la django, le compile et l'execute)
---> exemple a faire, tuto : https://angular.io/tutorial -> tour of heroes.
+--> exemple a faire, tuto : https://angular.io/tutorial -> tour of heroes (ch. 1 -> 4 ).
 DONE ->
 Summary
 
@@ -21,13 +21,21 @@ You're at the end of your journey, and you've accomplished a lot.
 
 site : learnxinyminutes ( exos plusieurs langages )
 
-Exo bonus today : 
+ToH ch 1-6 done,
+Exo bonus Day1 : 
  ajouter un component contact et son routing
 
-EXO todo Day2 (wip, compteur works ;) :
+
+Exo Day2 - done :
     - mettre en place une nouvelle route (routerlink) "compteur" (et son component)
     val de base 0 (nb de clicks + = ++, - = --)
     [-] onclick -> - +1
     [+] onclick -> + +1
 
     DONE, locale non persistante (en jouant sur les propriétés d'objet) -> Todo pour le fun si le temps : valeur dans une api en simulant une db / requete a distance + une fonction pour les deux actions selon le dom cliqué
+
+Exo Day2 - Todo list :
+    - faire une liste de taches a faire:
+        - pouvoir ajouter des taches ( un input de champ de caracteres ? )
+        - passer un statut fait / pas fait ( genre rayé si tache accomplie ), bouton supprimer pour la tache
+        - Ajout de filtres : afficher les taches a faire / accomplies / toutes
