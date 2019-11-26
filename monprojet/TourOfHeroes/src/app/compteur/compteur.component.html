@@ -1,1 +1,23 @@
-<p>compteur works!</p>
+<div class="count boutons">
+    <div>
+        <span> Compteur: </span>
+        <h2>{{dumCount.valeur}}</h2>
+    </div>
+    <div class="boutons">
+        <button (click)="dumCount.inc()"> + </button>
+        <button (click)="dumCount.dec()"> - </button>
+    </div>
+</div>
+
+<!-- ou simple :
+ <h2>{nombre}</h2>
+ <button (click)="incrementer()"> + </button>
+ <button (click)="decrementer()"> - </button>
+ <button (click)="reset()"> reset </button>
+ <button (click)="ajouter(1)"> + </button>
+ <button (click)="ajouter(-1)"> - </button>
+ 
+ <button (click)="add(inc)"> + </button>
+ <button (click)="add(dec)"> - </button>
+-->
+
