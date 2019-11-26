@@ -1,1 +1,34 @@
-<p>minuteur works!</p>
+<p>{{title}} works!</p>
+<h1>Appli minuteur</h1>
+
+<h2>Minuteurs disponibles: <h2><br>
+<table border="1">
+    <tr>
+        <!-- DUMMY <th style="text-align: center;"> Minuteur 1 label </th>
+        <th style="text-align: center;"> Minuteur 2 label </th> -->
+        <th style="text-align: center;" *ngFor="let minuteur of minuTestlist; let index=index">{{minuteur.libelle}}</th>
+    </tr>
+    <tr>
+        <!-- DUMMY  <td style="text-align: center;"> compteur 1 <div style="border: solid 1px;"> 00 </div> </td>
+        <td style="text-align: center;"> compteur 2 <div style="border: solid 1px;"> 00 </div> </td> -->
+        <td style="text-align: center;" *ngFor="let minuteur of minuTestlist; let index=index"> Time left: <div style="border: solid 1px;">{{minuteur.timeleft}}</div> </td>
+    </tr>
+    <tr>
+        <!-- DUMMY <td style="text-align: center;"> Minuteur 1 fonctions <div style="border: solid 1px;"><button>start</button> / <button>stop</button> | <button>supprimer</button></div> </td>
+        <td style="text-align: center;"> Minuteur 2 fonctions <div style="border: solid 1px;"><button>start</button> / <button>stop</button> | <button>supprimer</button></div> </td> -->
+        <td style="text-align: center;" *ngFor="let minuteur of minuTestlist; let index=index"> Fonctions: <div style="border: solid 1px;"><button (click)="tickStart(index)">start</button> / <button (click)="tickStop(index)">stop</button> | <button (click)="minDelete(index)">supprimer</button></div></td>
+    </tr>
+</table>
+
+<br><hr>
+<!-- TODO : vrai form angular en get, pas des input deg -->
+<h3> Ajouter un minuteur </h3>
+<form style="border: solid 1px; width: 500px; text-align:center;">
+    <label for="libelle"> Libellé </label><br>
+    <input type="text" id="libelle" placeholder="nom du minuteur" required >
+    <br>
+    <label for="timelimit"> Durée </label><br>
+    <input type="number" id="timelimit" placeholder="temps en secondes" required  >
+    <br>
+    <input type="submit" value="Valider le minuteur" (click)="addMin()">
+</form>
