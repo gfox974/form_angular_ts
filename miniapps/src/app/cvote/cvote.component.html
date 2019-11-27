@@ -12,17 +12,20 @@
         <th style="text-align: center;" *ngFor="let candidat of listecandidats">{{candidat.nom}}</th>
     </tr>
     <tr>
-        <td style="text-align: center;" *ngFor="let candidat of listecandidats"> <img src='{{candidat.photo}}'  alt="" style="width:100px; height:100px"> <div style="border: solid 1px;"> {{candidat.votes}} v </div></td>
+        <td style="text-align: center;" *ngFor="let candidat of listecandidats"> <img src='{{candidat.photo}}'  alt="" style="width:100px; height:100px"> <div style="border: solid 1px;"> {{candidat.percRes}}% </div></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;" *ngFor="let candidat of listecandidats; let index=index"> <div style="border: solid 1px;"><button (click)="vote(index)">Voter</button></div></td>
     </tr>
 </table>
 
 <br><hr>
 
 <!-- Partie fonctionnelle -->
-<form [formGroup]="voteForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="voteForm" (ngSubmit)="onSubmit(index)">
     <select>
         <option value="" disabled>Votez pour ...</option>
-        <option *ngFor="let candidat of listecandidats;" [ngValue]="candidat">{{candidat.nom}}</option>
+        <option *ngFor="let candidat of listecandidats; let index=index" [ngValue]="candidat">{{candidat.nom}}</option>
     </select>
     <button type="submit" >Voter !</button>
 </form>

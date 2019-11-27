@@ -11,15 +11,16 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CvoteComponent implements OnInit {
   candidat: string;
   listecandidats: Candidat[] = [
-    {nom: "Kimmy", photo: "../../assets/images/dummy_1.jpg", votes: 0},
-    {nom: "Donnie", photo: "../../assets/images/dummy_2.jpg", votes: 0},
-    {nom: "Blanc", photo: "../../assets/images/blank.jpg", votes: 0}
+    {nom: "Kimmy", photo: "../../assets/images/dummy_1.jpg", votes: 0, percRes: 0},
+    {nom: "Donnie", photo: "../../assets/images/dummy_2.jpg", votes: 0, percRes: 0},
+    {nom: "Blanc", photo: "../../assets/images/blank.jpg", votes: 0, percRes: 0}
   ];
 
   voteForm = this.fb.group({
     nom: ['', Validators.required],
     photo: [''],
-    votes: ['']
+    votes: [''],
+    percRes: ['']
   });
 
   totalvotes: number = 0;
@@ -28,12 +29,17 @@ export class CvoteComponent implements OnInit {
   ngOnInit() {
   }
   
-  onSubmit() {
-    //console.log("debug input", candidat.nom);
-    //let voteTo = this.listecandidats[idx];
-    //voteTo.votes ++;
+  vote(idx: number) {
+    console.log("debug input", idx);
+    let voteTo = this.listecandidats[idx];
+    voteTo.votes = voteTo.votes +1;
     this.totalvotes ++;
+    voteTo.percRes = (100 * voteTo.votes) / this.totalvotes; // todo : actualiser tous les candidats au refresh
     //candidat.votes ++;
+  }
+
+  onSubmit(){
+
   }
 
 }
