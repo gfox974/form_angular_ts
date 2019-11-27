@@ -21,7 +21,7 @@
 </table>
 
 <br><hr>
-<!-- TODO : vrai form angular en get, pas des input deg -->
+<!-- TODO : vrai form angular en get, pas des input deg
 <h3> Ajouter un minuteur </h3>
 <form style="border: solid 1px; width: 500px; text-align:center;">
     <label for="libelle"> Libellé </label><br>
@@ -31,4 +31,16 @@
     <input type="number" id="timelimit" placeholder="temps en secondes" required  >
     <br>
     <input type="submit" value="Valider le minuteur" (click)="addMin()">
+</form> -->
+<h3>Ajouter un minuteur</h3>
+
+<form [formGroup]="minutForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="nom du chrono" required formControlName="libelle">
+    <input type="number" placeholder="durée en secondes" required formControlName="timelimit">
+    <button type="submit" [disabled]="!minutForm.valid">Submit</button>
 </form>
+<p>
+    Min lib: {{ minutForm.libelle }}
+    Min lim: {{ minutForm.timelimit }}
+    Status: {{ minutForm.status }}
+</p>

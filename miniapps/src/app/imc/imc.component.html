@@ -1,1 +1,22 @@
-<p>imc works!</p>
+<h1>Indice de Masse Corporelle</h1>
+<table name="toto">
+    <tr>
+        <td>
+        <div>
+            <form [formGroup]="input" (ngSubmit)="onSubmit()">
+                <input type="number" placeholder="Taille en cm" required formControlName="taille">
+                <input type="number" placeholder="Poids en kilos" required formControlName="poids">
+                <button type="submit" [disabled]="!input.valid">Evaluer</button>
+            </form>
+        </div>
+        </td>
+    </tr>
+    <tr>
+        <div>
+            <p>RESULT</p>
+            <p>
+                Eval: {{ eval }}
+            </p>
+        </div>
+    </tr>
+</table>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 //cust
 import { Minuteur } from './models/minuteur';
+import { FormBuilder, Validators } from '@angular/forms';
+//import { MinutFormComponent } from './minut-form/minut-form.component';
 
 @Component({
   selector: 'app-minuteur',
@@ -14,7 +16,13 @@ export class MinuteurComponent implements OnInit {
     {libelle: "TEST_1", timelimit: 30, timeleft: 30, running: false},
     {libelle: "TEST_2", timelimit: 50, timeleft: 50, running: false}
   ];
-  constructor() { }
+
+  minutForm = this.fb.group({
+    libelle: ['', Validators.required],
+    timelimit: ['', Validators.required]
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
@@ -62,11 +70,14 @@ export class MinuteurComponent implements OnInit {
   minDelete(idx: number){
       this.minuTestlist.splice(idx,1);
   }
-  // form part
-  addMin(){
-    if (this.minuteur) {
-      this.minuTestlist.push({libelle: this.minuteur, timelimit: 10, timeleft: 10, running: false});
-      this.minuteur = "";
+  
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.minutForm.value);
+    if (this.minutForm.status) {
+      this.minuTestlist.push({libelle: this.minutForm.value.libelle, timelimit: this.minutForm.value.timelimit, timeleft: this.minutForm.value.timelimit, running: false});
+      
+      console.warn(this.minutForm.value.libelle);
     }
   }
 

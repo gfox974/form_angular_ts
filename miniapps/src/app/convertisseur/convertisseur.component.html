@@ -1,1 +1,48 @@
-<p>convertisseur works!</p>
+<h1>Convertisseur</h1>
+<table>
+    <tr>
+        <th>Celsius -> Farenheits</th>
+    </tr>
+    <tr>
+        <td>
+            <div>
+                <p>Entrer des degres celsius</p>
+                <form [formGroup]="input" (ngSubmit)="onSubmitCel()">
+                    <input type="number" placeholder="Entrez une valeur" required formControlName="inValue">
+                    <button type="submit" [disabled]="!input.valid">Submit</button>
+                </form>
+            </div>
+        </td>
+        <td>
+            <div>
+                <p>RESULT</p>
+                <p>
+                    Result: {{ resultCel }}
+                </p>
+            </div>
+        </td>
+    </tr>
+    <br><hr>
+    <tr>
+            <th>Farenheits -> Celsius</th>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p>Entrer des degres Farenheit</p>
+                    <form [formGroup]="input" (ngSubmit)="onSubmitFar()">
+                        <input type="number" placeholder="Entrez une valeur" required formControlName="inValue">
+                        <button type="submit" [disabled]="!input.valid">Submit</button>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p>RESULT</p>
+                    <p>
+                        Result: {{ resultFar }}
+                    </p>
+                </div>
+            </td>
+        </tr>
+</table>

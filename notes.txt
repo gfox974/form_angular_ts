@@ -46,15 +46,15 @@ DONE, mais encore des pistes a explo pour la liste
 Exos Day3 - mini apps à faire :
 ( new proj miniapps)
     - faire au moins trois de ces exercices :
-        - appli minuteur (difficulté **):
+        - appli minuteur (difficulté **): DONE
             - pouvoir creer des minuteurs (customs avec libellé, start/stop) qui une fois démarrés se décomptent jusqu'a 0 (avec un refresh du visuel) -> alert ou autre DONE.
             (setInterval peut aider)
             - Fournir a l'utilisateur le moyen de creer un minuteur et de definir son temps
         
-        - un convertisseur farenheit vers celsius (difficulté *):
+        - un convertisseur farenheit vers celsius (difficulté *): DONE
             - L'utilisateur doit entrer une valeur en degrés farenheit, on affiche son equivalent en celsius
         
-        - IMC (indice de masse corporelle - difficulté *) :
+        - IMC (indice de masse corporelle - difficulté *) : DONE
             - on entre sa taille en cm, son poids, l'application calcule et restitue l'indice de masse corporelle ( etat anorexie, maigreur, etc)
 
         - RPN (reversed polish notation) : créer une calculatrice rpn (difficulté ***)
@@ -64,9 +64,9 @@ Exos Day3 - mini apps à faire :
                               *  
         ( bref, voir techpedia vis à vis du rpn)
 
-        - Chuck norris jokes api (difficulté **): 
+        - Chuck norris jokes api (difficulté **): DONE (mais errors warn a la compile)
             on va faire appel à une api pour fetch des jokes aleatoires (via un service) -> api dispo ici : https://api.chucknorris.io/ 
             ( doc observables)
 
-        - Vote (difficulté **):
+        - Vote (difficulté **): demi-done : wip, sur les compteurs
             On a une urne, on procede au dépouillement, on doit savoir : quels candidats on a (nom), le nombre de votes total, le nombre de votes pour chacun des candidats, chaque bouton permet de voter pour un candidat, on affiche le % de voix pour chacun en dessous (+ bonus prise en compte du blanc(null))
